@@ -1,10 +1,4 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
-<html>
 
-<?php include("res/fragments/header.php"); ?>
-
-<body data-spy="scroll" data-target=".navbar" data-offset="50" id="body">
     <script>
         $(document).ready(function() {
             // Add scrollspy to <body>
@@ -36,7 +30,6 @@
             });
         });
     </script>
-    <?php include("res/fragments/nav.php"); ?>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -48,15 +41,15 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active" style="max-height: 600px;">
-                <img src="img/food1.jpeg" alt="Burger">
+                <img src="<?php echo base_url(); ?>resource/img/food1.jpeg" alt="Burger">
             </div>
 
             <div class="item" style="max-height: 600px;">
-                <img src="img/food2.jpg" alt="Burrito">
+                <img src="<?php echo base_url(); ?>resource/img/food2.jpg" alt="Burrito">
             </div>
 
             <div class="item" style="max-height: 600px;">
-                <img src="img/food3.jpg" alt="Pizza">
+                <img src="<?php echo base_url(); ?>resource/img/food3.jpg" alt="Pizza">
             </div>
         </div>
 
@@ -78,7 +71,9 @@
     <div id="calendar" class="container-fluid bg-3 text-center">
         <h1>Calendar</h1>
         <br>
+        <?php echo $calendar;?>
     </div>
+<!--
     <div class="container-fluid bg-3 text-center ">
         <div class="row day-row">
             <div class="col-xs-1 col-md-1 day-col">
@@ -133,7 +128,7 @@
             <div class="col-xs-12 col-md-1 day">
                 <span class="label label-default">7</span>
             </div>
-            <a href="recipe.php?name=Meatballs">
+            <a href="recipes/0">
                 <div class="col-xs-1 col-md-1 recipe1-img day" title="Meatballs">
                     <span class="label label-default">8</span>
                 </div>
@@ -187,7 +182,7 @@
             <div class="col-xs-1 col-md-1 day">
                 <span class="label label-default">23</span>
             </div>
-            <a href="recipe.php?name=Pancakes">
+            <a href="recipes/1">
                 <div class="col-xs-1 col-md-1 recipe2-img day" title="Pancakes">
                     <span class="label label-default">24</span>
                 </div>
@@ -222,17 +217,6 @@
                 <span class="label label-default">3</span>
             </div>
         </div>
+-->
     </div>
-
-    <?php include("res/fragments/browse_recipe.php"); ?>
     
-
-    <br>
-
-    <br>
-    <br>
-
-    <?php include("res/fragments/footer.php"); ?>
-</body>
-
-</html>
